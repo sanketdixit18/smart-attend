@@ -224,8 +224,8 @@ export default function LoginPage() {
 
           {/* Demo accounts */}
           <div style={{ marginTop: 24, padding: '14px 16px', background: 'rgba(236,127,169,0.08)', borderRadius: 12, border: '1px solid rgba(236,127,169,0.2)' }}>
-            <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8, fontWeight: 600 }}>Demo Accounts (password: password123)</p>
-            {[
+            {/* <p style={{ fontSize: 12, color: 'var(--text-muted)', marginBottom: 8, fontWeight: 600 }}>Demo Accounts (password: password123)</p> */}
+            {/* {[
               ['admin@smartattend.com', 'Admin'],
               ['faculty@smartattend.com', 'Faculty'],
               ['student@smartattend.com', 'Student'],
@@ -233,7 +233,7 @@ export default function LoginPage() {
               <button key={r} onClick={() => { setEmail(e); setPassword('password123'); }} style={{ display: 'block', fontSize: 12, color: 'var(--dark-accent)', background: 'none', border: 'none', cursor: 'pointer', padding: '2px 0', fontFamily: 'DM Sans, sans-serif' }}>
                 → {r}: {e}
               </button>
-            ))}
+            ))} */}
           </div>
 
           <p style={{ textAlign: 'center', marginTop: 24, fontSize: 14, color: 'var(--text-secondary)' }}>
