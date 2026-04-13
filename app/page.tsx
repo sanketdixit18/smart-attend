@@ -155,7 +155,7 @@ export default function LandingPage() {
           </div>
           <span style={{ fontFamily: 'Playfair Display, serif', fontSize: 16, fontWeight: 700, color: 'var(--dark-accent)' }}>SmartAttend</span>
         </div>
-        <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>© 2024 SmartAttend — Built with Next.js, MySQL & ❤️</p>
+        {/* <p style={{ fontSize: 13, color: 'var(--text-muted)' }}>© 2024 SmartAttend — Built with Next.js, MySQL & ❤️</p> */}
         <div style={{ display: 'flex', gap: 20 }}>
           <Link href="/login" style={{ fontSize: 13, color: 'var(--text-muted)', textDecoration: 'none' }}>Login</Link>
           <Link href="/register" style={{ fontSize: 13, color: 'var(--text-muted)', textDecoration: 'none' }}>Register</Link>
