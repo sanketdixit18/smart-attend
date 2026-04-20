@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Layer 4: Duplicate check
-    const existing = await query<unknown[]>(
+    const existing = await query(
       'SELECT id FROM attendance WHERE student_id = ? AND session_id = ?',
       [user.id, tokenData.session_id]
     );
