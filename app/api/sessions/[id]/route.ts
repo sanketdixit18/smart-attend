@@ -17,7 +17,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const sessions = await query<unknown[]>(
+  const sessions = await query(
     `SELECT s.*, c.name as class_name, c.latitude, c.longitude, c.radius_meters,
      t.token, t.expires_at
      FROM sessions s
