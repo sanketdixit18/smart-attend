@@ -26,10 +26,15 @@ export async function POST(req: NextRequest) {
     }
 
     // Layer 2: Token valid + not expired
-    const tokens = await query<unknown[]>(
+    // const tokens = await query<unknown[]>(
+    //   'SELECT t.*, s.class_id, s.is_active, c.latitude as class_lat, c.longitude as class_lon, c.radius_meters FROM tokens t JOIN sessions s ON t.session_id = s.id JOIN classes c ON s.class_id = c.id WHERE t.token = ? AND t.expires_at > NOW()',
+    //   [token]
+    // );
+    const tokens = await query(
       'SELECT t.*, s.class_id, s.is_active, c.latitude as class_lat, c.longitude as class_lon, c.radius_meters FROM tokens t JOIN sessions s ON t.session_id = s.id JOIN classes c ON s.class_id = c.id WHERE t.token = ? AND t.expires_at > NOW()',
       [token]
     );
+
 
     if (!tokens || (tokens as unknown[]).length === 0) {
       return NextResponse.json({ error: 'QR code expired or invalid. Please scan again.', layer: 2 }, { status: 400 });
