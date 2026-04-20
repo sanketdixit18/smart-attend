@@ -83,7 +83,7 @@ export async function POST(req: NextRequest) {
       }
 
       // Check UID is not already taken
-      const existingUID = await query<unknown[]>(
+      const existingUID = await query(
         'SELECT id FROM users WHERE uid = ?',
         [uid.trim().toUpperCase()]
       );
@@ -93,7 +93,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Check email not already taken
-    const existing = await query<unknown[]>('SELECT id FROM users WHERE email = ?', [email]);
+    const existing = await query('SELECT id FROM users WHERE email = ?', [email]);
     if (existing.length > 0) {
       return NextResponse.json({ error: 'Email already registered' }, { status: 409 });
     }
