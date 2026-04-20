@@ -335,7 +335,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <style>{`
         @media (min-width: 768px) {
           .sidebar-desktop { display: block !important; }
-          main { margin-left: 260px; }
+          // main { margin-left: 260px; }
         }
       `}</style>
     </div>
