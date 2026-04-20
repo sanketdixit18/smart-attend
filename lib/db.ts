@@ -42,7 +42,7 @@ export default pool;
 //   return rows;
 // }
 
-export async function query(sql, params = []) {
+export async function query<T = any>(sql: string, params: any[] = []): Promise<T> {
   const [rows] = await pool.execute(sql, params);
-  return rows;
+  return rows as T;
 }
