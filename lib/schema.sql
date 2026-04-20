@@ -1,6 +1,6 @@
--- SmartAttend Database Schema
-CREATE DATABASE IF NOT EXISTS smart_attend;
-USE smart_attend;
+-- -- SmartAttend Database Schema
+-- CREATE DATABASE IF NOT EXISTS smart_attend;
+-- USE smart_attend;
 
 CREATE TABLE IF NOT EXISTS users (
   id INT AUTO_INCREMENT PRIMARY KEY,
