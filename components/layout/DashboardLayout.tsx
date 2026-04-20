@@ -309,7 +309,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       </AnimatePresence>
 
       {/* Main content */}
-      <div style={{ flex: 1, marginLeft: 0, display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flex: 1, marginLeft: 260, display: 'flex', flexDirection: 'column' }}>
         {/* Top navbar */}
         <header style={{ height: 64, background: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(24px)', borderBottom: '1px solid rgba(255,184,224,0.25)', display: 'flex', alignItems: 'center', padding: '0 24px', gap: 16, position: 'sticky', top: 0, zIndex: 40 }}>
           <button onClick={() => setSidebarOpen(!sidebarOpen)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)', padding: 8, borderRadius: 10 }}>
